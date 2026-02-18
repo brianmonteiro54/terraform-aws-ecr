@@ -12,7 +12,7 @@ data "aws_iam_policy_document" "ecr_kms_key_policy" {
     principals {
       type = "AWS"
       identifiers = [
-        "arn:${data.aws_partition.ecr_kms.partition}:iam::${data.aws_caller_identity.ecr_kms.account_id}:root"
+        "arn:${local.partition}:iam::${local.account_id}:root"
       ]
     }
 

@@ -3,6 +3,15 @@
 # =============================================================================
 
 locals {
+
+  # Account ID for cross-account access
+  account_id = data.aws_caller_identity.current.account_id
+
+  # Region
+  region = data.aws_region.current.region
+
+  partition = data.aws_partition.current.partition
+
   # Merge default tags with custom tags
   common_tags = merge(
     {
@@ -27,9 +36,5 @@ locals {
     )
   ) : null
 
-  # Account ID for cross-account access
-  account_id = data.aws_caller_identity.current.account_id
 
-  # Region
-  region = data.aws_region.current.name
 }

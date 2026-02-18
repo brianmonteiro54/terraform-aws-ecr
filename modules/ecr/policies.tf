@@ -15,7 +15,8 @@ data "aws_iam_policy_document" "repository_policy" {
 
     principals {
       type        = "AWS"
-      identifiers = ["arn:${data.aws_partition.current.partition}:iam::${local.account_id}:root"]
+      identifiers = ["arn:${local.partition}:iam::${local.account_id}:root"]
+
     }
 
     actions = [
