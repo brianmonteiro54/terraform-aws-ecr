@@ -18,7 +18,6 @@ locals {
       Module      = "terraform-aws-ecr"
       ManagedBy   = "Terraform"
       Environment = var.environment
-      CostCenter  = var.cost_center
     },
     var.tags
   )
