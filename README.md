@@ -23,19 +23,6 @@ Módulo completo para repositórios ECR com:
 
 ---
 
-## 📦 Recursos Criados
-
-| Recurso | Descrição |
-|---------|-----------|
-| `aws_ecr_repository` | Repositório de imagens |
-| `aws_ecr_lifecycle_policy` | Política de ciclo de vida |
-| `aws_ecr_repository_policy` | Política de acesso (opcional) |
-| `aws_ecr_replication_configuration` | Replicação multi-região (opcional) |
-| `aws_kms_key` | Chave KMS (opcional) |
-| `aws_iam_policy` | Políticas IAM push/pull (opcional) |
-
----
-
 ## 🚀 Uso
 
 ```hcl
