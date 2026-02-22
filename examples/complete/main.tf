@@ -35,7 +35,7 @@ module "ecr" {
   # IMMUTABLE prevents overwriting existing tags — recommended for prod
   # ---------------------------------------------------
   image_tag_mutability = "IMMUTABLE"
-  force_delete         = false   # Safety: prevent accidental deletion with images
+  force_delete         = false # Safety: prevent accidental deletion with images
 
   # ---------------------------------------------------
   # Encryption — customer-managed KMS key (auto-created)
@@ -57,10 +57,10 @@ module "ecr" {
   # ---------------------------------------------------
   create_lifecycle_policy          = true
   enable_lifecycle_untagged_images = true
-  lifecycle_untagged_days          = 7    # Remove untagged images after 7 days
+  lifecycle_untagged_days          = 7 # Remove untagged images after 7 days
 
   enable_lifecycle_tagged_images = true
-  lifecycle_tagged_count         = 10    # Keep last 10 images per tag prefix
+  lifecycle_tagged_count         = 10 # Keep last 10 images per tag prefix
   lifecycle_tagged_prefixes      = ["prod", "staging", "dev", "v"]
 
   # ---------------------------------------------------
@@ -68,7 +68,7 @@ module "ecr" {
   # Uncomment allowed_read_principals to grant cross-account pull access
   # ---------------------------------------------------
   create_repository_policy = true
-  allowed_read_principals  = []   # e.g. ["arn:aws:iam::111122223333:root"]
+  allowed_read_principals  = [] # e.g. ["arn:aws:iam::111122223333:root"]
   allowed_write_principals = []
   allow_lambda_pull        = false
 
